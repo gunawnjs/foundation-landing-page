@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+:root{
+    --dark-clr: #1F2937; /*heading and footer*/
+    --blue-200: #3882f6;
+    --blue-400: #2658a8;
+    --white-200: #F9FAF8;
+    --white-400: #E5E7EB;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header nav{
+    background-color: var(--dark-clr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+button{
+    /* max-width: 120px; */
+    color: var(--white-200);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: var(--blue-200);
+    font-size: calc(14px + 2 * ((100vw - 320px) / 580));
+    cursor: pointer;
+}
+.logo{
+    color: var(--white-200);
+    font-weight: 900;
+    font-size:  calc(18px + 5 * ((100vw - 320px) / 580));
+}
+.sidebar{
+    display: none;
+    color: var(--white-400);
+}
+.burger img{
+    width: 1.5rem;
+    display: flex;
+    cursor: pointer;
+    border: solid 2px var(--dark-clr);
+}
+.burger img:active{
+    border: solid 2px var(--white-200);
+    border-radius: 5px;
+}
+.heading{
+    background-color: var(--dark-clr);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+.heading h1{
+    color: var(--white-200);
+    font-size: calc(43px + 5 * ((100vw - 320px) / 580));
+    font-weight: 900;
+}
+.heading p{
+    color: var(--white-400);
+    font-size: calc(15px + 3 * ((100vw - 320px) / 580));
+    font-weight: 400;
+}
+.dummy-img{
+    background-color: #a0a0a0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(12px + 4 * ((100vw - 320px) / 580));
+}
+.heading .wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.heading button{
+    margin-top: 5px;
+}
+.heading button:active{
+    background-color: var(--blue-400);
+}
+.info{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info h1{
+    color: var(--dark-clr);
+    font-size: calc(33px + 3 * ((100vw - 320px) / 580));
+    font-weight: 900;
+    text-align: center;
+}
+.info p{
+    margin-top: 12px;
+    color: var(--dark-clr);
+    text-align: center;
+    font-size: calc(14px + 2 * ((100vw - 320px) / 580));
+}
+.card{
+    width: 200px;
+    height: 200px;
+    border: solid 5px var(--blue-200);
+    border-radius: 15px;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.card-container .wrapper{
+    max-width: 200px;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.quotes{
+    background-color: var(--white-400);
+    padding: calc(4rem + ((1vw - 3.2px) * 11.0345)) 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.quotes q{
+    font-weight: 300;
+    font-style: italic;
+    font-size: calc(26px + 10 * ((100vw - 320px) / 580));
+}
+.quotes cite{
+    font-size: calc(16px + 2 * ((100vw - 320px) / 580));
+    font-style: inherit;
+    font-weight: 900;
+    align-self: end;
+}
+.signup{
+    background-color: var(--blue-200);
+    color: var(--white-200);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    margin: calc(2rem + ((1vw - 3.2px) * 5.5172)) calc(1rem + ((1vw - 3.2px) * 2.7586));
+    border-radius: 5px;
+    gap: 1.2rem;
+}
+.signup h1{
+    margin-bottom: 8px;
+}
+.signup button{
+    background-color: inherit;
+    border: solid 2px;
+    flex: 1;
+}
+.signup button:active{
+    background-color: var(--white-200);
+    color: var(--blue-200);
+}
+footer{
+    font-size: calc(14px + 2 * ((100vw - 320px) / 580));
+    text-align: center;
+    background-color: var(--dark-clr);
+    color: var(--white-200);
+    padding: 2rem;
+}
+@media (min-width: 600px) {
+    .signup button{
+        max-width: 430px;
+    }
+}
+
+@media (min-width: 800px) {
+    .burger{
+        display: none;
+    }
+    header .sidebar{
+        
+        display: flex;
+        gap: 1rem;
+    }
+    .signup button{
+        max-width: 120px;
+    }
+}   
+
+@media (min-width: 900px){
+    header nav,
+    .heading{
+        padding: 2rem 4rem;
+    }
+}
+
+@media (min-width: 1200px){
+    header nav,
+    .heading{
+        padding: 2rem 12em;
+    }
+}
