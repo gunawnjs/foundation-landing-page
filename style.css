@@ -33,6 +33,7 @@ button{
     padding: 8px;
     background-color: var(--blue-200);
     font-size: calc(14px + 2 * ((100vw - 320px) / 580));
+    font-weight: 700;
     cursor: pointer;
 }
 .logo{
@@ -73,6 +74,7 @@ button{
 }
 .dummy-img{
     background-color: #a0a0a0;
+    color: var(--white-200);
     width: 100%;
     height: 200px;
     display: flex;
@@ -126,7 +128,6 @@ button{
 }
 .card-container .wrapper{
     max-width: 200px;
-    border: solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,6 +136,7 @@ button{
 }
 .quotes{
     background-color: var(--white-400);
+    color: var(--dark-clr);
     padding: calc(4rem + ((1vw - 3.2px) * 11.0345)) 2rem;
     display: flex;
     flex-direction: column;
@@ -146,7 +148,7 @@ button{
     font-size: calc(26px + 10 * ((100vw - 320px) / 580));
 }
 .quotes cite{
-    font-size: calc(16px + 2 * ((100vw - 320px) / 580));
+    font-size: calc(18px + 2 * ((100vw - 320px) / 580));
     font-style: inherit;
     font-weight: 900;
     align-self: end;
@@ -186,14 +188,26 @@ footer{
     .signup button{
         max-width: 430px;
     }
+    .quotes{
+        /* border: solid; */
+        padding: 6rem 4.5rem;
+    }
+    .quotes q{
+        font-size: 36px;
+    }
+    .quotes cite{
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width: 800px) {
+    header nav{
+        padding-top: 2rem;
+    }
     .burger{
         display: none;
     }
     header .sidebar{
-        
         display: flex;
         gap: 1rem;
     }
@@ -207,11 +221,43 @@ footer{
     .heading{
         padding: 2rem 4rem;
     }
+    .heading{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+    .dummy-img{
+        margin-left: 3rem;
+    }
+    .heading button{
+        max-width: 120px;
+    }
 }
 
 @media (min-width: 1200px){
     header nav,
     .heading{
-        padding: 2rem 12em;
+        padding: 2rem 12rem;
+    }
+    .heading{
+        padding-bottom: 4rem;
+    }
+    .dummy-img{
+        /* max-width: 320px; */
+    }
+    .card-container{
+        gap: 2rem;
+    }
+    .card{
+        height: 180px;
+        width: 180px;
+        border: 3px solid var(--blue-200);
+    }
+    .quotes{
+        padding: 8rem 12rem;
+    }
+    .signup{
+        margin: 4.5rem 12rem;
     }
 }
